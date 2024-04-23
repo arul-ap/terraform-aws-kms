@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
   default_tags {
     tags = var.default_tags
   }
@@ -16,10 +15,10 @@ provider "aws" {
 
 
 module "kms" {
-  source = "arul-ap/kms/aws"
-  org = "abc"
-  proj = "x"
-  env = "dev"
+  source   = "arul-ap/kms/aws"
+  org      = "abc"
+  proj     = "x"
+  env      = "dev"
   cmk_keys = {}
 }
 
